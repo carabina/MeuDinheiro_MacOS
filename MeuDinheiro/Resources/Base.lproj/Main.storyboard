@@ -1,7 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="XfG-lQ-9wD">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11134"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
+        <capability name="box content view" minToolsVersion="7.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -673,7 +677,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="MeuDinheiro" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -688,7 +692,7 @@
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
-			<connections>
+                        <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
                         </connections>
                     </window>
@@ -700,18 +704,148 @@
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
-        <!--View Controller-->
+        <!--Main-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Main" id="XfG-lQ-9wD" customClass="ViewController" customModule="MeuDinheiro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="720" height="640"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <box autoresizesSubviews="NO" boxType="custom" borderType="line" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="DSc-bO-Fok" userLabel="Container Box">
+                                <rect key="frame" x="0.0" y="0.0" width="720" height="640"/>
+                                <view key="contentView" id="Fea-gW-Jvl">
+                                    <rect key="frame" x="1" y="1" width="718" height="638"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <box boxType="custom" borderWidth="2" cornerRadius="10" title="Container" translatesAutoresizingMaskIntoConstraints="NO" id="Hep-ce-zua" userLabel="Header Box">
+                                            <rect key="frame" x="8" y="424" width="702" height="206"/>
+                                            <view key="contentView" id="4Jz-Di-Wsd">
+                                                <rect key="frame" x="2" y="2" width="698" height="202"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="32" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xll-aA-Wh2">
+                                                        <rect key="frame" x="32" y="32" width="634" height="138"/>
+                                                        <subviews>
+                                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1dO-vh-Kr0">
+                                                                <rect key="frame" x="283" y="111" width="68" height="27"/>
+                                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Saldo" id="d2y-K2-9kv">
+                                                                    <font key="font" size="22" name="Helvetica-Bold"/>
+                                                                    <color key="textColor" red="0.22352941176470587" green="0.74901960784313726" blue="0.83529411764705885" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                </textFieldCell>
+                                                            </textField>
+                                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SSx-5s-Ceg">
+                                                                <rect key="frame" x="248" y="49" width="139" height="30"/>
+                                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="1.000,00 R$" id="53Q-oJ-FUo">
+                                                                    <font key="font" size="24" name="Helvetica-Bold"/>
+                                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                </textFieldCell>
+                                                            </textField>
+                                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NtP-YK-jmv">
+                                                                <rect key="frame" x="264" y="0.0" width="107" height="17"/>
+                                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="atualizado no dia" id="OA7-BP-dPh">
+                                                                    <font key="font" size="13" name="Helvetica"/>
+                                                                    <color key="textColor" red="0.22352941176470587" green="0.74901960784313726" blue="0.83529411764705885" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                </textFieldCell>
+                                                            </textField>
+                                                        </subviews>
+                                                        <visibilityPriorities>
+                                                            <integer value="1000"/>
+                                                            <integer value="1000"/>
+                                                            <integer value="1000"/>
+                                                        </visibilityPriorities>
+                                                        <customSpacing>
+                                                            <real value="3.4028234663852886e+38"/>
+                                                            <real value="3.4028234663852886e+38"/>
+                                                            <real value="3.4028234663852886e+38"/>
+                                                        </customSpacing>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="Xll-aA-Wh2" secondAttribute="bottom" constant="32" id="0Ca-QA-hmy"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Xll-aA-Wh2" secondAttribute="trailing" constant="32" id="2Rb-lN-Zw2"/>
+                                                    <constraint firstItem="Xll-aA-Wh2" firstAttribute="leading" secondItem="4Jz-Di-Wsd" secondAttribute="leading" constant="32" id="NwB-kJ-Wqj"/>
+                                                    <constraint firstItem="Xll-aA-Wh2" firstAttribute="centerX" secondItem="4Jz-Di-Wsd" secondAttribute="centerX" id="ddb-P7-LGH"/>
+                                                    <constraint firstItem="Xll-aA-Wh2" firstAttribute="top" secondItem="4Jz-Di-Wsd" secondAttribute="top" constant="32" id="oX9-zL-6Ss"/>
+                                                </constraints>
+                                            </view>
+                                            <color key="borderColor" red="0.52549019607843139" green="0.83529411764705885" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="fillColor" red="0.85098039219999999" green="0.94901960780000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </box>
+                                        <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vhK-Qa-1RS">
+                                            <rect key="frame" x="191" y="348" width="337" height="44"/>
+                                            <subviews>
+                                                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HfT-86-9j1">
+                                                    <rect key="frame" x="-6" y="-7" width="171" height="55"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="WbG-La-N6M"/>
+                                                    </constraints>
+                                                    <buttonCell key="cell" type="push" title="Mostar Histórico" bezelStyle="rounded" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5Vp-kc-0Ma">
+                                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                        <font key="font" size="18" name="Helvetica"/>
+                                                    </buttonCell>
+                                                </button>
+                                                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="A8h-R4-fRV">
+                                                    <rect key="frame" x="161" y="-7" width="182" height="55"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="TKK-wq-otL"/>
+                                                    </constraints>
+                                                    <buttonCell key="cell" type="push" title="Adicionar entrada" bezelStyle="rounded" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6tn-PG-sA0">
+                                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                        <font key="font" size="18" name="Helvetica"/>
+                                                    </buttonCell>
+                                                    <connections>
+                                                        <segue destination="yfM-Mz-VEC" kind="modal" id="jGq-GJ-lVP"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <visibilityPriorities>
+                                                <integer value="1000"/>
+                                                <integer value="1000"/>
+                                            </visibilityPriorities>
+                                            <customSpacing>
+                                                <real value="3.4028234663852886e+38"/>
+                                                <real value="3.4028234663852886e+38"/>
+                                            </customSpacing>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="vhK-Qa-1RS" firstAttribute="centerX" secondItem="Fea-gW-Jvl" secondAttribute="centerX" id="8tO-f8-Gz0"/>
+                                        <constraint firstItem="Hep-ce-zua" firstAttribute="top" secondItem="Fea-gW-Jvl" secondAttribute="top" constant="8" id="BNe-BG-k8V"/>
+                                        <constraint firstAttribute="trailing" secondItem="Hep-ce-zua" secondAttribute="trailing" constant="8" id="Cr4-Zm-m6Y"/>
+                                        <constraint firstItem="Hep-ce-zua" firstAttribute="leading" secondItem="Fea-gW-Jvl" secondAttribute="leading" constant="8" id="mRh-a1-Zfv"/>
+                                        <constraint firstItem="vhK-Qa-1RS" firstAttribute="top" secondItem="Hep-ce-zua" secondAttribute="bottom" constant="32" id="uZ8-Wg-YDG"/>
+                                    </constraints>
+                                </view>
+                                <color key="fillColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                            </box>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="DSc-bO-Fok" secondAttribute="trailing" id="Ag5-vz-FH2"/>
+                            <constraint firstItem="DSc-bO-Fok" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="Kcl-UH-TPZ"/>
+                            <constraint firstAttribute="bottom" secondItem="DSc-bO-Fok" secondAttribute="bottom" id="UHS-Jr-n1L"/>
+                            <constraint firstItem="DSc-bO-Fok" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="tiA-Dq-HIk"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="buttonHistory" destination="HfT-86-9j1" id="5xX-sh-gMS"/>
+                        <outlet property="buttonNewEntry" destination="A8h-R4-fRV" id="NPG-se-9aY"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="75" y="898"/>
+        </scene>
+        <!--EntryDetail-->
+        <scene sceneID="SC6-fd-0XT">
+            <objects>
+                <controllerPlaceholder storyboardName="EntryDetail" id="yfM-Mz-VEC" sceneMemberID="viewController"/>
+                <customObject id="OKX-M7-Phb" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="670" y="898"/>
         </scene>
     </scenes>
 </document>

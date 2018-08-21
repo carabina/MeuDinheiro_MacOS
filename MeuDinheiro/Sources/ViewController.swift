@@ -9,11 +9,14 @@
 import Cocoa
 
 class ViewController: NSViewController {
-
+    
+    @IBOutlet weak var buttonNewEntry: NSButton!
+    @IBOutlet weak var buttonHistory: NSButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        
     }
 
     override var representedObject: Any? {

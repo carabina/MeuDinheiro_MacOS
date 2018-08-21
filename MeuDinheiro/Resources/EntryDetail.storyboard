@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="NbA-UC-CAV">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
+        <capability name="box content view" minToolsVersion="7.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
+    </dependencies>
+    <scenes>
+        <!--Description-->
+        <scene sceneID="Wb6-yE-U0W">
+            <objects>
+                <viewController title="Description" id="NbA-UC-CAV" customClass="EntryDetailController" customModule="MeuDinheiro" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="pS7-Px-Reo">
+                        <rect key="frame" x="0.0" y="0.0" width="720" height="440"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <box boxType="custom" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="cz1-Fr-0aI" userLabel="Container Box">
+                                <rect key="frame" x="8" y="8" width="704" height="424"/>
+                                <view key="contentView" id="KrF-nV-xDm">
+                                    <rect key="frame" x="1" y="1" width="702" height="422"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0te-p5-Cft">
+                                            <rect key="frame" x="323" y="8" width="56" height="32"/>
+                                            <buttonCell key="cell" type="bevel" title="Salvar" bezelStyle="rounded" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="lvp-FC-EQ9">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" size="18" name="Helvetica"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="actionSave:" target="NbA-UC-CAV" id="qRh-fc-5gX"/>
+                                            </connections>
+                                        </button>
+                                        <box boxType="custom" borderWidth="2" cornerRadius="10" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="QPT-hS-Rg7" userLabel="Entry Box">
+                                            <rect key="frame" x="8" y="48" width="686" height="366"/>
+                                            <view key="contentView" id="rsC-X1-4CI">
+                                                <rect key="frame" x="2" y="2" width="682" height="362"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gT3-SW-jdk">
+                                                        <rect key="frame" x="30" y="303" width="150" height="27"/>
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Nova Entrada" id="0kf-js-IiJ">
+                                                            <font key="font" size="22" name="Helvetica-Bold"/>
+                                                            <color key="textColor" red="0.22352941179999999" green="0.74901960779999999" blue="0.83529411760000005" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6iP-rM-qHh">
+                                                        <rect key="frame" x="567" y="25" width="89" height="32"/>
+                                                        <buttonCell key="cell" type="push" title="Proximo" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3Hw-vc-LaY">
+                                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="actionNext:" target="NbA-UC-CAV" id="fQc-oJ-TT1"/>
+                                                        </connections>
+                                                    </button>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bnn-pq-aW0">
+                                                        <rect key="frame" x="62" y="216" width="53" height="23"/>
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Valor" id="HiY-G2-RL5">
+                                                            <font key="font" size="18" name="Helvetica-Bold"/>
+                                                            <color key="textColor" red="0.22352941179999999" green="0.74901960779999999" blue="0.83529411760000005" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="16" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OQS-kJ-ZDw">
+                                                        <rect key="frame" x="64" y="117" width="288" height="75"/>
+                                                        <subviews>
+                                                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ySM-dy-YZM">
+                                                                <rect key="frame" x="0.0" y="31" width="288" height="44"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="44" id="9gj-YE-9ct"/>
+                                                                    <constraint firstAttribute="width" constant="288" id="DNm-nB-6CH"/>
+                                                                </constraints>
+                                                                <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" drawsBackground="YES" id="L9e-sh-pQl">
+                                                                    <font key="font" size="15" name="Helvetica"/>
+                                                                    <color key="textColor" red="0.22352941176470587" green="0.74901960784313726" blue="0.83529411764705885" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                </textFieldCell>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="10"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </textField>
+                                                            <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="24" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RtE-Xu-UGI">
+                                                                <rect key="frame" x="0.0" y="0.0" width="144" height="15"/>
+                                                                <subviews>
+                                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SdZ-If-wCF">
+                                                                        <rect key="frame" x="-2" y="-2" width="62" height="19"/>
+                                                                        <buttonCell key="cell" type="check" title="Radio" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="HkA-dk-bef">
+                                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                            <font key="font" size="15" name="Helvetica"/>
+                                                                        </buttonCell>
+                                                                        <connections>
+                                                                            <action selector="tlgCreditDebit:" target="NbA-UC-CAV" id="ogd-v0-fxa"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button verticalHuggingPriority="750" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="If7-Zd-7Is">
+                                                                        <rect key="frame" x="80" y="-2" width="66" height="19"/>
+                                                                        <buttonCell key="cell" type="check" title="Debito" bezelStyle="regularSquare" imagePosition="left" inset="2" id="qOi-xJ-eeT">
+                                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                            <font key="font" size="15" name="Helvetica"/>
+                                                                        </buttonCell>
+                                                                        <connections>
+                                                                            <action selector="tlgCreditDebit:" target="NbA-UC-CAV" id="5YK-2i-RWi"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                                <visibilityPriorities>
+                                                                    <integer value="1000"/>
+                                                                    <integer value="1000"/>
+                                                                </visibilityPriorities>
+                                                                <customSpacing>
+                                                                    <real value="3.4028234663852886e+38"/>
+                                                                    <real value="3.4028234663852886e+38"/>
+                                                                </customSpacing>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <visibilityPriorities>
+                                                            <integer value="1000"/>
+                                                            <integer value="1000"/>
+                                                        </visibilityPriorities>
+                                                        <customSpacing>
+                                                            <real value="3.4028234663852886e+38"/>
+                                                            <real value="3.4028234663852886e+38"/>
+                                                        </customSpacing>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="gT3-SW-jdk" firstAttribute="leading" secondItem="rsC-X1-4CI" secondAttribute="leading" constant="32" id="AcD-ZQ-KYh"/>
+                                                    <constraint firstAttribute="bottom" secondItem="6iP-rM-qHh" secondAttribute="bottom" constant="32" id="Dkf-fm-m8A"/>
+                                                    <constraint firstItem="bnn-pq-aW0" firstAttribute="top" secondItem="gT3-SW-jdk" secondAttribute="bottom" constant="64" id="GFH-zf-qg3"/>
+                                                    <constraint firstItem="bnn-pq-aW0" firstAttribute="leading" secondItem="rsC-X1-4CI" secondAttribute="leading" constant="64" id="YXQ-B5-P9M"/>
+                                                    <constraint firstItem="OQS-kJ-ZDw" firstAttribute="top" secondItem="bnn-pq-aW0" secondAttribute="bottom" constant="24" id="aal-Db-wLM"/>
+                                                    <constraint firstItem="gT3-SW-jdk" firstAttribute="top" secondItem="rsC-X1-4CI" secondAttribute="top" constant="32" id="ahX-8h-7x3"/>
+                                                    <constraint firstAttribute="trailing" secondItem="6iP-rM-qHh" secondAttribute="trailing" constant="32" id="woI-8U-ujL"/>
+                                                    <constraint firstItem="OQS-kJ-ZDw" firstAttribute="leading" secondItem="bnn-pq-aW0" secondAttribute="leading" id="y4C-53-vxU"/>
+                                                </constraints>
+                                            </view>
+                                            <color key="borderColor" red="0.22352941179999999" green="0.74901960779999999" blue="0.83529411760000005" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="fillColor" red="0.85098039219999999" green="0.94901960780000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </box>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="QPT-hS-Rg7" firstAttribute="top" secondItem="KrF-nV-xDm" secondAttribute="top" constant="8" id="H8N-x9-xZd"/>
+                                        <constraint firstItem="0te-p5-Cft" firstAttribute="centerX" secondItem="KrF-nV-xDm" secondAttribute="centerX" id="NCU-Jb-Sfc"/>
+                                        <constraint firstAttribute="trailing" secondItem="QPT-hS-Rg7" secondAttribute="trailing" constant="8" id="NdO-ex-U90"/>
+                                        <constraint firstItem="QPT-hS-Rg7" firstAttribute="leading" secondItem="KrF-nV-xDm" secondAttribute="leading" constant="8" id="Tso-Sv-k11"/>
+                                        <constraint firstAttribute="bottom" secondItem="0te-p5-Cft" secondAttribute="bottom" constant="8" id="hsu-lv-FMf"/>
+                                        <constraint firstItem="0te-p5-Cft" firstAttribute="top" secondItem="QPT-hS-Rg7" secondAttribute="bottom" constant="8" id="l3d-NS-Cgi"/>
+                                    </constraints>
+                                </view>
+                                <color key="fillColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </box>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="cz1-Fr-0aI" secondAttribute="trailing" constant="8" id="8cD-e1-f4p"/>
+                            <constraint firstAttribute="bottom" secondItem="cz1-Fr-0aI" secondAttribute="bottom" constant="8" id="AfV-bq-9d8"/>
+                            <constraint firstItem="cz1-Fr-0aI" firstAttribute="leading" secondItem="pS7-Px-Reo" secondAttribute="leading" constant="8" id="DkS-yz-8W4"/>
+                            <constraint firstItem="cz1-Fr-0aI" firstAttribute="top" secondItem="pS7-Px-Reo" secondAttribute="top" constant="8" id="smj-Wf-Fnm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnNext" destination="6iP-rM-qHh" id="ZMi-vH-x2a"/>
+                        <outlet property="btnSave" destination="0te-p5-Cft" id="qXm-ad-O66"/>
+                        <outlet property="lbTitle" destination="bnn-pq-aW0" id="kT4-5s-6WI"/>
+                        <outlet property="skToogle" destination="RtE-Xu-UGI" id="L5u-oA-WkD"/>
+                        <outlet property="tfEntryData" destination="ySM-dy-YZM" id="esE-VK-5gu"/>
+                        <outlet property="tlgCredit" destination="SdZ-If-wCF" id="ndE-dk-Rp9"/>
+                        <outlet property="tlgDebit" destination="If7-Zd-7Is" id="PMG-xD-tQA"/>
+                    </connections>
+                </viewController>
+                <customObject id="Uau-ok-XDi" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="898" y="898"/>
+        </scene>
+    </scenes>
+</document>

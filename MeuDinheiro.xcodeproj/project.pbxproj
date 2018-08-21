@@ -12,6 +12,8 @@
 		B8223B9621285414004049AA /* MeuDinheiro.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B8223B9421285414004049AA /* MeuDinheiro.xcdatamodeld */; };
 		B8223B982128541F004049AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8223B972128541F004049AA /* Assets.xcassets */; };
 		B8223B9B21285420004049AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8223B9921285420004049AA /* Main.storyboard */; };
+		B8223BA421285B91004049AA /* EntryDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8223BA321285B91004049AA /* EntryDetail.storyboard */; };
+		B8223BAB21286242004049AA /* EntryDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8223BAA21286242004049AA /* EntryDetailController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		B8223B9A21285420004049AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B8223B9C21285420004049AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8223B9D21285420004049AA /* MeuDinheiro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MeuDinheiro.entitlements; sourceTree = "<group>"; };
+		B8223BA321285B91004049AA /* EntryDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EntryDetail.storyboard; sourceTree = "<group>"; };
+		B8223BAA21286242004049AA /* EntryDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDetailController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,15 +59,49 @@
 		B8223B8F21285414004049AA /* MeuDinheiro */ = {
 			isa = PBXGroup;
 			children = (
-				B8223B9021285414004049AA /* AppDelegate.swift */,
-				B8223B9221285414004049AA /* ViewController.swift */,
-				B8223B972128541F004049AA /* Assets.xcassets */,
-				B8223B9921285420004049AA /* Main.storyboard */,
-				B8223B9C21285420004049AA /* Info.plist */,
-				B8223B9D21285420004049AA /* MeuDinheiro.entitlements */,
-				B8223B9421285414004049AA /* MeuDinheiro.xcdatamodeld */,
+				B8223BA821285BC6004049AA /* Other Files */,
+				B8223BA621285B9E004049AA /* Resources */,
+				B8223BA521285B99004049AA /* Sources */,
 			);
 			path = MeuDinheiro;
+			sourceTree = "<group>";
+		};
+		B8223BA521285B99004049AA /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B8223BA921285BE4004049AA /* Database */,
+				B8223B9221285414004049AA /* ViewController.swift */,
+				B8223BAA21286242004049AA /* EntryDetailController.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		B8223BA621285B9E004049AA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B8223B972128541F004049AA /* Assets.xcassets */,
+				B8223B9921285420004049AA /* Main.storyboard */,
+				B8223BA321285B91004049AA /* EntryDetail.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B8223BA821285BC6004049AA /* Other Files */ = {
+			isa = PBXGroup;
+			children = (
+				B8223B9021285414004049AA /* AppDelegate.swift */,
+				B8223B9C21285420004049AA /* Info.plist */,
+				B8223B9D21285420004049AA /* MeuDinheiro.entitlements */,
+			);
+			name = "Other Files";
+			sourceTree = "<group>";
+		};
+		B8223BA921285BE4004049AA /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				B8223B9421285414004049AA /* MeuDinheiro.xcdatamodeld */,
+			);
+			name = Database;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +162,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8223BA421285B91004049AA /* EntryDetail.storyboard in Resources */,
 				B8223B982128541F004049AA /* Assets.xcassets in Resources */,
 				B8223B9B21285420004049AA /* Main.storyboard in Resources */,
 			);
@@ -139,6 +178,7 @@
 				B8223B9321285414004049AA /* ViewController.swift in Sources */,
 				B8223B9621285414004049AA /* MeuDinheiro.xcdatamodeld in Sources */,
 				B8223B9121285414004049AA /* AppDelegate.swift in Sources */,
+				B8223BAB21286242004049AA /* EntryDetailController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +322,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.salgados.Productions.macOS.MeuDinheiro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -301,6 +342,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.salgados.Productions.macOS.MeuDinheiro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
