@@ -112,7 +112,6 @@ class  EntryDetailController: NSViewController {
     
     
     @IBAction func actionSave(_ sender: Any) {
-        
         print("\(String(describing: dataValue)) \n \(String(describing: dataDescription)) \n \(String(describing: dataBoolean)) ")
         self.dismissViewController(self)
     }

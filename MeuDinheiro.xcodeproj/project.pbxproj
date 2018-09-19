@@ -14,6 +14,11 @@
 		B8223B9B21285420004049AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8223B9921285420004049AA /* Main.storyboard */; };
 		B8223BA421285B91004049AA /* EntryDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8223BA321285B91004049AA /* EntryDetail.storyboard */; };
 		B8223BAB21286242004049AA /* EntryDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8223BAA21286242004049AA /* EntryDetailController.swift */; };
+		B87E51C12150518C00D45253 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B87E51C02150518C00D45253 /* History.storyboard */; };
+		B87E51C6215053EC00D45253 /* GroupSplitView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B87E51C5215053EC00D45253 /* GroupSplitView.xib */; };
+		B87E51C9215056DA00D45253 /* GroupSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87E51C8215056DA00D45253 /* GroupSplitView.swift */; };
+		B8A5BC9A21513D6D00F61537 /* HistorySplitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A5BC9921513D6D00F61537 /* HistorySplitController.swift */; };
+		B8A5BC9C2151402000F61537 /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A5BC9B2151402000F61537 /* GroupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +32,11 @@
 		B8223B9D21285420004049AA /* MeuDinheiro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MeuDinheiro.entitlements; sourceTree = "<group>"; };
 		B8223BA321285B91004049AA /* EntryDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EntryDetail.storyboard; sourceTree = "<group>"; };
 		B8223BAA21286242004049AA /* EntryDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDetailController.swift; sourceTree = "<group>"; };
+		B87E51C02150518C00D45253 /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
+		B87E51C5215053EC00D45253 /* GroupSplitView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupSplitView.xib; sourceTree = "<group>"; };
+		B87E51C8215056DA00D45253 /* GroupSplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupSplitView.swift; sourceTree = "<group>"; };
+		B8A5BC9921513D6D00F61537 /* HistorySplitController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistorySplitController.swift; sourceTree = "<group>"; };
+		B8A5BC9B2151402000F61537 /* GroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,9 +79,9 @@
 		B8223BA521285B99004049AA /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				B87E51C7215056AC00D45253 /* Views */,
 				B8223BA921285BE4004049AA /* Database */,
-				B8223B9221285414004049AA /* ViewController.swift */,
-				B8223BAA21286242004049AA /* EntryDetailController.swift */,
+				B87E51C22150534E00D45253 /* Controllers */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -82,6 +92,8 @@
 				B8223B972128541F004049AA /* Assets.xcassets */,
 				B8223B9921285420004049AA /* Main.storyboard */,
 				B8223BA321285B91004049AA /* EntryDetail.storyboard */,
+				B87E51C02150518C00D45253 /* History.storyboard */,
+				B87E51C5215053EC00D45253 /* GroupSplitView.xib */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -102,6 +114,25 @@
 				B8223B9421285414004049AA /* MeuDinheiro.xcdatamodeld */,
 			);
 			name = Database;
+			sourceTree = "<group>";
+		};
+		B87E51C22150534E00D45253 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B8223B9221285414004049AA /* ViewController.swift */,
+				B8223BAA21286242004049AA /* EntryDetailController.swift */,
+				B8A5BC9921513D6D00F61537 /* HistorySplitController.swift */,
+				B8A5BC9B2151402000F61537 /* GroupViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		B87E51C7215056AC00D45253 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B87E51C8215056DA00D45253 /* GroupSplitView.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +196,8 @@
 				B8223BA421285B91004049AA /* EntryDetail.storyboard in Resources */,
 				B8223B982128541F004049AA /* Assets.xcassets in Resources */,
 				B8223B9B21285420004049AA /* Main.storyboard in Resources */,
+				B87E51C12150518C00D45253 /* History.storyboard in Resources */,
+				B87E51C6215053EC00D45253 /* GroupSplitView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,6 +212,9 @@
 				B8223B9621285414004049AA /* MeuDinheiro.xcdatamodeld in Sources */,
 				B8223B9121285414004049AA /* AppDelegate.swift in Sources */,
 				B8223BAB21286242004049AA /* EntryDetailController.swift in Sources */,
+				B87E51C9215056DA00D45253 /* GroupSplitView.swift in Sources */,
+				B8A5BC9A21513D6D00F61537 /* HistorySplitController.swift in Sources */,
+				B8A5BC9C2151402000F61537 /* GroupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
